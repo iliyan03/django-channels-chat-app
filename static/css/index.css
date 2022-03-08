@@ -1,0 +1,39 @@
+.user{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.user span{
+    font-size: 22px;
+}
+
+.container-fluid{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container-fluid > div > *{
+    margin: 5px 0;
+}
+
+.container-fluid span{
+    font-size: 26px;
+}
+
+.container-fluid input{
+    font-size: 22px;
+    text-align: center;
+    width: 75%;
+    border: 1px solid black;
+}
+
+.container-fluid button{
+    font-size: 26px;
+    margin-top: 5px;
+    border: transparent;
+    border-radius: 10px;
+}

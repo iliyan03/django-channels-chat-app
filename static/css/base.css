@@ -1,0 +1,13 @@
+body{
+    min-height: 100vh;
+}
+
+.login *{
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    .login *{
+        font-size: 20px;
+    }
+}

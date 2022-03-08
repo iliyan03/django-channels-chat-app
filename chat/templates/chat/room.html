@@ -1,0 +1,29 @@
+{% extends "chat/base.html" %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/room.css' %}">
+{% endblock style %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="chat">
+            <a href="{% url 'index' %}"> &#60;- Go back</a>
+            <div class="messages" id="messages">
+                <!-- Messages -->
+            </div>
+            <div class="create_message">
+                <input id="chat-message-input" type="text" class="rounded" placeholder="Message">
+                <button id="chat-message-submit" class="btn-success px-5 rounded">Send</button>
+            </div>
+        </div>
+    </div>
+
+    {{ room_name|json_script:"room-name" }}
+
+    <script>
+        const username = '{{ request.user.username }}';
+    </script>
+    <script src="{% static 'js/room.js' %}"></script>
+
+{% endblock content %}
